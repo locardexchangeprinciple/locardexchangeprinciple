@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dx Terminal</title>
+    <link rel="icon" href="locardxchange.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ff00ff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: glow-bg 5s infinite alternate;
+        }
+
+        @keyframes glow-bg {
+            0% { background-color: #0d0d0d; }
+            100% { background-color: #1a1a1a; }
+        }
+
+        h1 {
+            margin: 10px auto;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
+
+        p {
+            margin: 20px auto;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #ff00ff;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid #ff00ff;
+            color: #ff00ff;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        button:hover {
+            background-color: #ff00ff;
+            color: #0d0d0d;
+            box-shadow: 0 0 15px #ff00ff;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            font-size: 0.9rem;
+            color: #ff00ff;
+        }
+
+        footer a:hover {
+            color: #00ff00;
+        }
+
+        .terminal {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #ff00ff;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 15px #ff00ff;
+        }
+
+        .terminal p {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Dx Terminal</h1>
+    <div class="terminal">
+        <p>
+            <strong>
+                This login page is protected by code and is only intended for authorized users.
+                If you are not authorized to access this page, do not attempt to input any codes or information.
+                Unauthorized access is strictly prohibited and violators will be subjected to legal action.
+                Please leave this page immediately if you are not authorized.
+            </strong>
+        </p>
+    </div>
+    <p>For authorized login, click the button below:</p>
+    <a href="20241230/x_entercode.htm"><button>Enter Code</button></a>
+    <footer>
+        <p>&#169;<a href="https://locardxchange.github.io/" target="_blank">dxmercado</a></p>
+    </footer>
+</body>
+</html>
