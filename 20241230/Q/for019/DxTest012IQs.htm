@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Intelligence and Incident Response Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ecf0f1;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quiz-container {
+            background-color: #34495e;
+            border-radius: 15px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            padding: 35px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .question {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 18px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .question:hover {
+            background-color: #c0392b;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            color: #2c3e50;
+            border: 1px solid #bdc3c7;
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+        }
+
+        .question-container:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Cyber Threat Intelligence and Incident Response Quiz</h1>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(0)">1. What is the primary goal of incident response?</div>
+            <div class="answer" id="answer0">Containment and Mitigation</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(1)">2. Which phase of the incident response process involves identifying the source of an attack?</div>
+            <div class="answer" id="answer1">Identification</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(2)">3. What is the term used for tracking the actions of a threat actor over time?</div>
+            <div class="answer" id="answer2">Timeline Analysis</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(3)">4. Which data is crucial for identifying a cyberattack's origin?</div>
+            <div class="answer" id="answer3">Log Data</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(4)">5. What is the process of gathering and analyzing information about potential threats?</div>
+            <div class="answer" id="answer4">Threat Intelligence</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(5)">6. Which tool is commonly used for log aggregation and analysis during incident response?</div>
+            <div class="answer" id="answer5">SIEM</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(6)">7. What is the key difference between active and passive cyber threat intelligence?</div>
+            <div class="answer" id="answer6">Collection Method</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(7)">8. What is the primary goal of threat hunting?</div>
+            <div class="answer" id="answer7">Proactive Detection</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(8)">9. What is the first step after discovering a security breach?</div>
+            <div class="answer" id="answer8">Containment</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(9)">10. Which framework is used to guide incident response and handling processes?</div>
+            <div class="answer" id="answer9">NIST</div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            var answer = document.getElementById("answer" + index);
+            answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>

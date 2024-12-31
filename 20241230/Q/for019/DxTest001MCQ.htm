@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Digital Forensics Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+        .reveal {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function revealAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Introduction to Digital Forensics Quiz</h1>
+
+    <div class="question">
+        <p><strong>1. What is the primary goal of digital forensics?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer1a')">A. To prevent cybercrime</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer1b')">B. To gather and preserve digital evidence</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer1c')">C. To create digital data</span></li>
+        </ul>
+        <p id="answer1b" class="answer">Correct! The primary goal is to gather and preserve digital evidence.</p>
+        <p id="answer1a" class="answer">Incorrect. Prevention is a cybersecurity goal, not digital forensics.</p>
+        <p id="answer1c" class="answer">Incorrect. Creating data is not the goal of digital forensics.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>2. Which term best describes "the application of computer science techniques to solve legal issues"?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer2a')">A. Digital Evidence</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer2b')">B. Digital Forensics</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer2c')">C. Cybersecurity</span></li>
+        </ul>
+        <p id="answer2b" class="answer">Correct! Digital forensics focuses on solving legal issues using computer science.</p>
+        <p id="answer2a" class="answer">Incorrect. Digital evidence is an artifact, not a process.</p>
+        <p id="answer2c" class="answer">Incorrect. Cybersecurity deals with protecting systems, not solving legal issues.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>3. What is the chain of custody?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer3a')">A. A process to ensure evidence integrity</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer3b')">B. A list of suspects in a cybercrime</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer3c')">C. The chronological sequence of a cyberattack</span></li>
+        </ul>
+        <p id="answer3a" class="answer">Correct! The chain of custody ensures evidence integrity throughout an investigation.</p>
+        <p id="answer3b" class="answer">Incorrect. It does not pertain to suspects.</p>
+        <p id="answer3c" class="answer">Incorrect. It refers to evidence handling, not attack timelines.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>4. What is considered digital evidence?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer4a')">A. A physical object found at the crime scene</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer4b')">B. Information stored or transmitted in binary form</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer4c')">C. Testimonies of eyewitnesses</span></li>
+        </ul>
+        <p id="answer4b" class="answer">Correct! Digital evidence includes any data stored or transmitted in binary form.</p>
+        <p id="answer4a" class="answer">Incorrect. Physical objects are not considered digital evidence.</p>
+        <p id="answer4c" class="answer">Incorrect. Eyewitness testimonies are not digital evidence.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>5. Which of the following is NOT a step in the digital forensic process?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer5a')">A. Collection</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer5b')">B. Analysis</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer5c')">C. Fabrication</span></li>
+        </ul>
+        <p id="answer5c" class="answer">Correct! Fabrication is not a part of the forensic process.</p>
+        <p id="answer5a" class="answer">Incorrect. Collection is a key step in digital forensics.</p>
+        <p id="answer5b" class="answer">Incorrect. Analysis is a critical phase in digital forensics.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>6. What does the term "forensically sound" mean?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer6a')">A. Evidence is collected, analyzed, and presented in a manner that maintains integrity</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer6b')">B. Evidence is loud enough to be heard in court</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer6c')">C. Evidence is kept in a soundproof environment</span></li>
+        </ul>
+        <p id="answer6a" class="answer">Correct! "Forensically sound" means maintaining the integrity of evidence throughout the process.</p>
+        <p id="answer6b" class="answer">Incorrect. This is not related to audio levels.</p>
+        <p id="answer6c" class="answer">Incorrect. Soundproofing has no relevance to digital evidence.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>7. What is the first step in the digital forensic process?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer7a')">A. Preservation</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer7b')">B. Analysis</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer7c')">C. Collection</span></li>
+        </ul>
+        <p id="answer7c" class="answer">Correct! Collection is the initial step in the digital forensic process.</p>
+        <p id="answer7a" class="answer">Incorrect. Preservation typically follows collection.</p>
+        <p id="answer7b" class="answer">Incorrect. Analysis occurs later in the process.</p>
+    </div>
+
+        <div class="question">
+        <p><strong>8. Why is the chain of custody important?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer8a')">A. To ensure evidence is admissible in court</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer8b')">B. To create backups of evidence</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer8c')">C. To train investigators</span></li>
+        </ul>
+        <p id="answer8a" class="answer">Correct! The chain of custody is crucial for ensuring evidence admissibility in court.</p>
+        <p id="answer8b" class="answer">Incorrect. Backups are not the primary purpose of the chain of custody.</p>
+        <p id="answer8c" class="answer">Incorrect. Training is unrelated to the chain of custody.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>9. What does "hash value" refer to in digital forensics?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer9a')">A. A type of encryption algorithm</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer9b')">B. A unique identifier for data integrity verification</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer9c')">C. A storage unit for evidence</span></li>
+        </ul>
+        <p id="answer9a" class="answer">Incorrect. Hash values are not encryption algorithms.</p>
+	<p id="answer9b" class="answer">Correct. Hash values uniquely identifies the contents of a file.</p>
+        <p id="answer9c" class="answer">Incorrect. Hash values are not storage units.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>10. Which of the following tools is commonly used for disk imaging in digital forensics?</strong></p>
+        <ul class="options">
+            <li><span class="reveal" onclick="revealAnswer('answer10a')">A. EnCase</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer10b')">B. FTK Imager</span></li>
+            <li><span class="reveal" onclick="revealAnswer('answer10c')">C. Wireshark</span></li>
+        </ul>
+        <p id="answer10b" class="answer">Correct! FTK Imager is a popular tool for disk imaging.</p>
+        <p id="answer10a" class="answer">Incorrect. EnCase is primarily used for analysis, not specifically for disk imaging.</p>
+        <p id="answer10c" class="answer">Incorrect. Wireshark is used for network packet analysis, not disk imaging.</p>
+    </div>
+</body>
+</html>

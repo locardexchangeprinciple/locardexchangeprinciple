@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Forensics Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #34495e;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #e67e22;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quiz-container {
+            background-color: #2c3e50;
+            border-radius: 15px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            padding: 35px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .question {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 18px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .question:hover {
+            background-color: #d35400;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            color: #2c3e50;
+            border: 1px solid #bdc3c7;
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+        }
+
+        .question-container:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Cloud Forensics Quiz</h1>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(0)">1. What is cloud forensics?</div>
+            <div class="answer" id="answer0">Cloud forensics refers to the process of investigating data stored in cloud environments and the applications used to manage it.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(1)">2. What makes cloud forensics different from traditional digital forensics?</div>
+            <div class="answer" id="answer1">Cloud forensics involves analyzing data from distributed systems, often across multiple jurisdictions, which complicates access and data retrieval.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(2)">3. What are the key challenges in cloud forensics investigations?</div>
+            <div class="answer" id="answer2">The challenges include data location, jurisdiction issues, encryption, and obtaining access to cloud service provider logs.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(3)">4. What type of data can be investigated in cloud forensics?</div>
+            <div class="answer" id="answer3">Data such as logs, emails, documents, user interactions, and backup files can be analyzed in cloud forensics investigations.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(4)">5. Why is chain of custody important in cloud forensics?</div>
+            <div class="answer" id="answer4">Maintaining the chain of custody ensures that digital evidence remains intact and unaltered, which is crucial for legal proceedings.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(5)">6. What is the role of cloud service provider logs in cloud forensics?</div>
+            <div class="answer" id="answer5">Logs from cloud service providers are essential for tracking access, modifications, and potential malicious activity in cloud environments.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(6)">7. Which cloud storage service is commonly investigated in cloud forensics?</div>
+            <div class="answer" id="answer6">Services such as Google Drive, Dropbox, and Amazon Web Services (AWS) are frequently examined in cloud forensics investigations.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(7)">8. What is a 'data residency' issue in cloud forensics?</div>
+            <div class="answer" id="answer7">Data residency refers to the physical location of data, which affects which laws and regulations apply during the forensic process.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(8)">9. What is the significance of metadata in cloud forensics?</div>
+            <div class="answer" id="answer8">Metadata provides information about the creation, modification, and access of data, making it crucial for timeline analysis in cloud forensics.</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(9)">10. What tools are commonly used in cloud forensics?</div>
+            <div class="answer" id="answer9">Tools such as EnCase, FTK Imager, X1 Social Discovery, and Cloud Forensics Tools (CFT) are commonly used in cloud forensics investigations.</div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            var answer = document.getElementById("answer" + index);
+            answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>

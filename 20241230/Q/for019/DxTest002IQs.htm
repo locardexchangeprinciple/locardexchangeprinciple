@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Evidence and Cybercrime Basics Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1abc9c;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quiz-container {
+            background-color: #16a085;
+            border-radius: 15px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            padding: 35px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .question {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 18px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .question:hover {
+            background-color: #c0392b;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            color: #2c3e50;
+            border: 1px solid #bdc3c7;
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+        }
+
+        .question-container:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Digital Evidence and Cybercrime Basics Quiz</h1>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(0)">1. What is digital evidence?</div>
+            <div class="answer" id="answer0">Data stored on electronic devices</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(1)">2. What is 'chain of custody' in digital forensics?</div>
+            <div class="answer" id="answer1">Process of documenting evidence handling</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(2)">3. What is the primary characteristic of digital evidence?</div>
+            <div class="answer" id="answer2">It exists in digital form and can be stored on electronic devices</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(3)">4. What is phishing?</div>
+            <div class="answer" id="answer3">Fraudulent attempt to steal sensitive information</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(4)">5. What type of crime is identity theft?</div>
+            <div class="answer" id="answer4">Cybercrime</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(5)">6. What is the primary goal of a hacker in a cybercrime?</div>
+            <div class="answer" id="answer5">Accessing unauthorized data</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(6)">7. What is the first step in handling digital evidence?</div>
+            <div class="answer" id="answer6">Seize and secure the device</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(7)">8. What is a common form of cybercrime that involves malware?</div>
+            <div class="answer" id="answer7">Ransomware</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(8)">9. What is the focus of social engineering in cybercrime?</div>
+            <div class="answer" id="answer8">Manipulating individuals into divulging confidential information</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer(9)">10. What is the role of forensic investigators in cybercrime?</div>
+            <div class="answer" id="answer9">Identify, collect, and analyze evidence</div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(index) {
+            var answer = document.getElementById("answer" + index);
+            answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
