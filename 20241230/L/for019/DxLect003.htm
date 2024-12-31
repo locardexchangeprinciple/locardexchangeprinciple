@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Systems and Data Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222222;
+            color: #00aaff;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .key-terms {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-left: 5px solid #00aaff;
+            margin-bottom: 20px;
+        }
+
+        .key-terms p {
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #00aaff;
+            color: #1e1e1e;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .discussion {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #444444;
+            color: #00aaff;
+            font-size: 1.2em;
+            border-radius: 8px;
+        }
+
+        .discussion p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>File Systems and Data Storage</h1>
+        <p>Understanding How Data is Organized and Stored on Devices</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Introduction to File Systems</h2>
+            <p>A file system is a method and structure used by operating systems to organize and manage files on storage devices like hard drives, SSDs, and external storage. It provides a way to store, retrieve, and update data in an organized manner, ensuring that files are accessible and can be effectively managed by both users and applications.</p>
+            <p>Understanding how file systems work is critical for digital forensics professionals, as they must know how data is stored, where it resides, and how it can be retrieved or recovered when needed for legal investigations.</p>
+        </section>
+
+        <section>
+            <h2>Types of File Systems</h2>
+            <p>There are several file systems, each with its unique characteristics and use cases. The most commonly used file systems are:</p>
+            <div class="key-terms">
+                <p><span class="highlight">NTFS (New Technology File System):</span> The default file system for Windows operating systems, known for supporting large file sizes and providing security features such as file encryption and permissions.</p>
+                <p><span class="highlight">FAT32 (File Allocation Table 32):</span> An older file system used by Windows and other systems. It is widely supported but has limitations, such as a 4 GB maximum file size.</p>
+                <p><span class="highlight">ext (Extended File System):</span> A family of file systems commonly used in Linux-based operating systems. ext4 is the most recent and widely used version.</p>
+                <p><span class="highlight">HFS+ (Hierarchical File System Plus):</span> The file system used by macOS before the introduction of APFS. It supports features like journaling to prevent data corruption.</p>
+            </div>
+            <p>Each file system has its strengths and weaknesses, and understanding these differences is essential when conducting investigations, as the methods for recovering data may vary based on the file system in use.</p>
+        </section>
+
+        <section>
+            <h2>Partitions and Volumes</h2>
+            <p>Storage devices can be divided into multiple logical units called partitions. A partition is a section of a storage device that is treated as a separate unit, allowing for better organization, security, and management of data.</p>
+            <p>In digital forensics, it's important to understand how partitions are set up and how data is stored within them. For example, a hard drive may have separate partitions for the operating system, user files, and system recovery data. Investigators must be able to navigate between partitions and analyze them individually during an investigation.</p>
+        </section>
+
+        <section>
+            <h2>Data Storage Media</h2>
+            <p>Data can be stored on various types of media, each with different characteristics. Common storage media include:</p>
+            <ul>
+                <li><span class="highlight">Hard Disk Drives (HDDs):</span> Magnetic storage devices that provide high capacity at lower costs but are slower than SSDs.</li>
+                <li><span class="highlight">Solid State Drives (SSDs):</span> Faster than HDDs, SSDs use flash memory and have no moving parts, making them more durable but generally more expensive.</li>
+                <li><span class="highlight">Optical Media (CDs, DVDs):</span> Optical storage used for media distribution, data backup, and archiving. However, they are less commonly used for general storage today.</li>
+                <li><span class="highlight">USB Drives:</span> Flash-based portable storage devices widely used for transferring data between systems.</li>
+            </ul>
+            <p>Each type of storage media has its own advantages and limitations. From a forensics perspective, knowing the media’s characteristics is essential when recovering data or determining how it might have been altered or erased.</p>
+        </section>
+
+        <section>
+            <h2>File System Analysis and Forensics</h2>
+            <p>File system analysis in digital forensics involves examining how files are stored, modified, and deleted from storage devices. This process often includes recovering files from unallocated space, slack space, or even damaged partitions. Tools like EnCase, FTK Imager, and Autopsy are commonly used to perform such analyses.</p>
+            <p>Forensics professionals must also understand how metadata works in file systems. Metadata includes information about a file, such as creation and modification dates, file permissions, and the file owner. This data can help piece together an individual’s activities and movements during an investigation.</p>
+        </section>
+
+        <section>
+            <h2>Things to Ponder</h2>
+            <p>File system forensics is a crucial component of many investigations. As the technology behind storage media evolves, the ways in which data is stored and retrieved are constantly changing. One key consideration in file system forensics is the ability to recover data from damaged or formatted storage devices. Knowing the limitations of different file systems and their recovery techniques is essential for any digital forensics professional.</p>
+            <p>Another challenge is dealing with encrypted or hidden data, which can be stored within a file system in ways that are difficult to detect. Understanding the structure of file systems and how data is hidden within them is an important skill for digital forensics investigators.</p>
+        </section>
+
+        <div class="discussion">
+            <p>Class Discussion Question:</p>
+            <p>What do you think are the key challenges in recovering data from SSDs compared to HDDs? How might the forensic investigation process differ when dealing with these two types of storage devices?</p>
+        </div>
+    </div>
+</body>
+</html>

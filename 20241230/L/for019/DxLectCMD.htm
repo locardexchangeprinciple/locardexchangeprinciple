@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduction to Command Line Interface (CLI) in Digital Forensics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b2b2b;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333333;
+            color: #ff7f00;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #ff7f00;
+            border-bottom: 2px solid #ff7f00;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .code-block {
+            background-color: #3a3a3a;
+            color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            overflow-x: auto;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .highlight {
+            background-color: #ff7f00;
+            color: #1e1e1e;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .discussion {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #444444;
+            color: #ff7f00;
+            font-size: 1.2em;
+            border-radius: 8px;
+        }
+
+        .discussion p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to Command Line Interface (CLI) in Digital Forensics</h1>
+        <p>Utilizing Command Prompt in Windows for Forensic Investigations</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>What is Command Line Interface (CLI)?</h2>
+            <p>The Command Line Interface (CLI) is a text-based interface used to interact with a computer system. Unlike graphical user interfaces (GUIs), where users interact with graphical elements like buttons and icons, the CLI requires users to type commands into a text-based terminal or console to execute various functions.</p>
+            <p>In digital forensics, CLI tools are widely used to access, analyze, and manipulate data quickly and efficiently. The Windows Command Prompt (CMD) is one of the most common interfaces used for forensic investigations on Windows-based systems.</p>
+        </section>
+
+        <section>
+            <h2>Why CLI in Digital Forensics?</h2>
+            <p>CLI is essential in digital forensics for several reasons:</p>
+            <ul>
+                <li><span class="highlight">Precision and Control:</span> CLI offers forensic investigators direct control over the system, allowing precise execution of commands for evidence collection and analysis.</li>
+                <li><span class="highlight">Speed:</span> Commands can be executed faster than navigating through GUI-based applications, making it ideal for time-sensitive investigations.</li>
+                <li><span class="highlight">Automation:</span> CLI commands can be scripted to automate repetitive tasks, such as searching for specific files or extracting metadata.</li>
+                <li><span class="highlight">Data Integrity:</span> CLI minimizes the risk of altering the system inadvertently, as it operates with fewer background processes and system interventions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Important Commands for Digital Forensics in Windows CLI</h2>
+            <p>Below are some commonly used Windows Command Prompt commands that are useful in digital forensics:</p>
+            
+            <h3>1. <span class="highlight">dir</span> - List Directory Contents</h3>
+            <p>The <span class="highlight">dir</span> command is used to list the files and directories within the current directory. It can be useful for identifying the files stored on a system during an investigation.</p>
+            <div class="code-block">
+                <pre>C:\> dir</pre>
+            </div>
+            <p>This will display all files and directories in the current folder. You can add parameters such as <span class="highlight">/s</span> to search subdirectories or <span class="highlight">/b</span> for a clean listing.</p>
+            
+            <h3>2. <span class="highlight">cd</span> - Change Directory</h3>
+            <p>The <span class="highlight">cd</span> command is used to change the current working directory. This is essential for navigating the file system and targeting specific areas for evidence collection.</p>
+            <div class="code-block">
+                <pre>C:\> cd Documents</pre>
+            </div>
+
+            <h3>3. <span class="highlight">copy</span> - Copy Files</h3>
+            <p>The <span class="highlight">copy</span> command is used to copy files from one location to another. In forensics, this command is used to make a forensic copy of critical evidence, such as files or logs.</p>
+            <div class="code-block">
+                <pre>C:\> copy C:\Users\Example\Documents\file.txt E:\Backup\</pre>
+            </div>
+
+            <h3>4. <span class="highlight">xcopy</span> - Extended Copy</h3>
+            <p>The <span class="highlight">xcopy</span> command allows users to copy entire directories, including subdirectories and files. This is useful for creating a forensic image of a specific directory.</p>
+            <div class="code-block">
+                <pre>C:\> xcopy C:\Users\Example\Documents\*.* E:\Backup\ /E /H</pre>
+            </div>
+            <p>The <span class="highlight">/E</span> switch copies all subdirectories, including empty ones, while the <span class="highlight">/H</span> switch ensures that hidden files are included.</p>
+
+            <h3>5. <span class="highlight">ipconfig</span> - Display Network Configuration</h3>
+            <p>The <span class="highlight">ipconfig</span> command displays the network configuration of a system, including IP addresses, subnet masks, and gateway information. It is vital for investigating network-related evidence.</p>
+            <div class="code-block">
+                <pre>C:\> ipconfig</pre>
+            </div>
+
+            <h3>6. <span class="highlight">netstat</span> - Network Connections</h3>
+            <p>The <span class="highlight">netstat</span> command shows active network connections on the system. This is useful for identifying suspicious or unauthorized connections that might indicate an attack or unauthorized access.</p>
+            <div class="code-block">
+                <pre>C:\> netstat -ano</pre>
+            </div>
+
+            <h3>7. <span class="highlight">tasklist</span> - List Running Processes</h3>
+            <p>The <span class="highlight">tasklist</span> command provides a list of all currently running processes on the system, including their Process ID (PID). This can help identify malicious processes during an investigation.</p>
+            <div class="code-block">
+                <pre>C:\> tasklist</pre>
+            </div>
+
+            <h3>8. <span class="highlight">findstr</span> - Search for Text in Files</h3>
+            <p>The <span class="highlight">findstr</span> command allows you to search for specific text within files. This is useful for looking through logs or text files for keywords that may be relevant to the investigation.</p>
+            <div class="code-block">
+                <pre>C:\> findstr "error" C:\Logs\logfile.txt</pre>
+            </div>
+
+            <h3>9. <span class="highlight">chkdsk</span> - Check Disk for Errors</h3>
+            <p>The <span class="highlight">chkdsk</span> command checks the integrity of a disk and repairs errors. It can be useful in forensics to ensure that evidence stored on a disk is not corrupted.</p>
+            <div class="code-block">
+                <pre>C:\> chkdsk C:</pre>
+            </div>
+
+            <h3>10. <span class="highlight">wmic</span> - Windows Management Instrumentation</h3>
+            <p>The <span class="highlight">wmic</span> command is used to gather detailed information about system components, such as the operating system, software, hardware, and network configurations. It can be helpful for documenting the system state during an investigation.</p>
+            <div class="code-block">
+                <pre>C:\> wmic os get caption, version</pre>
+            </div>
+
+            <h3>11. <span class="highlight">certutil</span> - Hashing Files</h3>
+            <p>The <span class="highlight">certutil</span> command can be used to compute file hashes, such as MD5, SHA1, and SHA256. This is a crucial step in digital forensics for verifying the integrity of files and ensuring they haven't been altered.</p>
+            <div class="code-block">
+                <pre>C:\> certutil -hashfile C:\path\to\file.txt SHA256</pre>
+            </div>
+            <p>This command will compute and display the SHA256 hash of the file located at <span class="highlight">C:\path\to\file.txt</span>.</p>
+
+            <h3>12. <span class="highlight">dir /T</span> - View File Timestamps (Metadata)</h3>
+            <p>The <span class="highlight">dir /T</span> command is used to view timestamps associated with files. Timestamps like <span class="highlight">creation</span>, <span class="highlight">last access</span>, and <span class="highlight">last modified</span> are crucial for understanding the timeline of events in digital investigations.</p>
+            <div class="code-block">
+                <pre>C:\> dir /T:C</pre>
+            </div>
+            <p>The <span class="highlight">/T:C</span> option shows the file creation time. Similarly, <span class="highlight">/T:A</span> shows the last access time, and <span class="highlight">/T:W</span> shows the last write time.</p>
+        </section>
+
+        <section class="discussion">
+            <p>Discussion:</p>
+            <p>In digital forensics, the ability to access and analyze system data through the command line is critical for investigators. Tools like hash verification, metadata analysis, and network connection examination are essential for preserving the integrity of evidence and uncovering hidden information during investigations.</p>
+        </section>
+    </div>
+</body>
+</html>
